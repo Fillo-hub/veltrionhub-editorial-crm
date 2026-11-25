@@ -1,0 +1,38 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { DashboardProvider } from "@/components/providers/DashboardProvider";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "VeltrionHub — Studio Editoriale, Task & Analytics Hub",
+  description:
+    "Piattaforma gestionale moderna per contenuti editoriali, pianificazione attività, categorie e analytics in tempo reale.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="it" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem={true}
+          storageKey="dashboard-theme"
+        >
+          <DashboardProvider>
+            {children}
+            <Toaster />
+          </DashboardProvider>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
