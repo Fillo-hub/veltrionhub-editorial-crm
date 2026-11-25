@@ -48,3 +48,17 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
+export const metadata: Metadata = {
+  description:
+    "Krelvia: assistente AI e workspace operativo locale con PostgreSQL, calcolatori, utility dev e gestione chat.",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"
+  ),
+  openGraph: {
+    description:
+      "Krelvia: assistente AI e workspace operativo locale con PostgreSQL, calcolatori, utility dev e gestione chat.",
+    title: "Krelvia — Workspace AI & Utility",
+    type: "website",
+  },
+  title: "Krelvia — Workspace AI & Utility",
+};
