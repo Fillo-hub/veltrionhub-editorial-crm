@@ -36,3 +36,15 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const metadata: Metadata = {
+  title: "VeltrionHub – Studio Editoriale, Task & Analytics Hub",
+  description:
+    "Piattaforma gestionale moderna per contenuti editoriali, pianificazione attività, categorie e analytics in tempo reale.",
+  openGraph: {
+    title: "VeltrionHub – Studio Editoriale, Task & Analytics Hub",
+    description:
+      "Piattaforma gestionale moderna per contenuti editoriali, pianificazione attività, categorie e analytics in tempo reale.",
+    type: "website",
+  },
+};
